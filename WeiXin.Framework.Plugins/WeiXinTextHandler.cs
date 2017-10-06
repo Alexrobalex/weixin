@@ -172,21 +172,6 @@ namespace WeiXin.Framework.Plugins
                     MsgType = requestModel.MsgType
                 };
             context.Response.Write(responseModel);
-        }
-        public string GetCmd(string Inputstr)
-        {
-            string rtn = string.Empty;
-            string Cmd = string.Empty;
-            string Parameter = string.Empty;
-            if (Inputstr.IndexOf("+") > 0)
-            {
-                Parameter = Inputstr.Substring(Inputstr.IndexOf("+") + 1).Trim();
-            }
-            else
-            {
-                Parameter = Inputstr.Substring(Inputstr.IndexOf("注册") + 2).Trim();
-            }
-            return rtn;
-        }
+        }       
     }
 }
